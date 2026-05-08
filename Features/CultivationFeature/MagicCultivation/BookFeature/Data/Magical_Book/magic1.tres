@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Magical_Book" load_steps=4 format=3 uid="uid://d2cilixbqyd8l"]
+
+[ext_resource type="Script" uid="uid://bmbmclh0hujt4" path="res://Features/CultivationFeature/MagicCultivation/BookFeature/Data/Magical_Book/magical_book.gd" id="1_ehegx"]
+[ext_resource type="Texture2D" uid="uid://b8ffjq7vqdp5q" path="res://Asset/waterbook.png" id="1_i0e43"]
+[ext_resource type="Texture2D" uid="uid://kghx6qismxva" path="res://Asset/Sprite-0004.png" id="2_45vlg"]
+
+[resource]
+script = ExtResource("1_ehegx")
+Magical_Qi_Idle = 3
+Magical_Qi_Bonus = 0
+Magical_Qi_Tick = 100
+Experiment_To_Level_Up = Array[int]([200, 1000, 10000])
+Level = 0
+Level_Experiment = 0
+Layout = ExtResource("2_45vlg")
+Cultivation = 0
+Element = 4
+Tier = 0
+Description = ""
+Name = "Water Book"
+Item = 2
+Icon = ExtResource("1_i0e43")
+metadata/_custom_type_script = "uid://bmbmclh0hujt4"

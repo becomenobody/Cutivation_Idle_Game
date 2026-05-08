@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://qq5k0hvf0l3h"]
+
+[ext_resource type="Script" uid="uid://cifqba5nolnbg" path="res://Features/InventoryFeature/Items/UI/item_information_popup.gd" id="1_kf34r"]
+
+[node name="Item_Information_Popup" type="Control" groups=["Popup_Information"]]
+process_priority = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_right = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_kf34r")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Container" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 87.0
+offset_bottom = 77.0
+
+[node name="Item_Name" type="Label" parent="Panel/Container"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Item Name"
+
+[node name="Item_Type" type="Label" parent="Panel/Container"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Item Type"
+
+[node name="Item_Usage" type="Label" parent="Panel/Container"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Usage"

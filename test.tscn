@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfjeh27c62ulx"]
+
+[ext_resource type="Script" uid="uid://cfruffvrhpiwt" path="res://panel.gd" id="1_8uh7m"]
+[ext_resource type="Texture2D" uid="uid://dga35k3hiabbr" path="res://Features/InventoryFeature/Items/Equipment/Asset/weapon1_texture.tres" id="2_8uh7m"]
+
+[node name="Test" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_8uh7m")
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_8uh7m")

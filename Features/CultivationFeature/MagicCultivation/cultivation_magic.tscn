@@ -1,0 +1,130 @@
+[gd_scene load_steps=5 format=3 uid="uid://5fiqqibkumba"]
+
+[ext_resource type="Script" uid="uid://bvm0gg3uxqs8h" path="res://Features/CultivationFeature/MagicCultivation/cultivation_magic.gd" id="1_fgfv4"]
+[ext_resource type="PackedScene" uid="uid://cexdmhuolnfgj" path="res://Features/CultivationFeature/MagicCultivation/BookFeature/UI/book_layout.tscn" id="1_tirdo"]
+[ext_resource type="PackedScene" uid="uid://qfo68w6yqp2n" path="res://Features/CultivationFeature/MagicCultivation/BookFeature/UI/book_ui.tscn" id="2_fgfv4"]
+[ext_resource type="PackedScene" uid="uid://yl67dcsfhm71" path="res://Features/CultivationFeature/MagicCultivation/BookFeature/UI/book_information.tscn" id="3_3tesp"]
+
+[node name="Cultivation_Magic" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_fgfv4")
+
+[node name="Realm" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 230.0
+offset_top = 426.5
+offset_right = 430.0
+offset_bottom = 677.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Book_Equiped" type="HBoxContainer" parent="Realm"]
+layout_mode = 2
+
+[node name="BookLayout" parent="Realm/Book_Equiped" instance=ExtResource("1_tirdo")]
+layout_mode = 2
+
+[node name="Cultivation_Type" type="Label" parent="Realm"]
+layout_mode = 2
+text = "Magical Cultivate"
+horizontal_alignment = 1
+
+[node name="Qi" type="Label" parent="Realm"]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="Realm"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+allow_greater = true
+
+[node name="Qi_Per_Tick" type="Label" parent="Realm"]
+visible = false
+layout_mode = 2
+text = "Tick"
+horizontal_alignment = 1
+
+[node name="RealmDisplay" type="Label" parent="Realm"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Realm"
+
+[node name="BreakThroughBtn" type="Button" parent="Realm"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "BreakThrough"
+
+[node name="Qi_Idle" type="Label" parent="Realm"]
+layout_mode = 2
+text = "Qi Idle:"
+
+[node name="Qi_Tick" type="Label" parent="Realm"]
+layout_mode = 2
+text = "Qi Tick :"
+
+[node name="Menu" type="BoxContainer" parent="."]
+layout_mode = 0
+offset_right = 224.0
+offset_bottom = 40.0
+theme_override_constants/separation = 20
+
+[node name="MeditationBtn" type="Button" parent="Menu"]
+layout_mode = 2
+text = "Meditation"
+
+[node name="BookBtn" type="Button" parent="Menu"]
+layout_mode = 2
+text = "Magical Book
+"
+
+[node name="Book" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 480.0
+offset_top = 330.0
+offset_right = 520.0
+offset_bottom = 370.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BookUI" parent="Book" instance=ExtResource("2_fgfv4")]
+layout_mode = 1
+
+[node name="Book_Information" parent="Book" instance=ExtResource("3_3tesp")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 480.0
+offset_right = 480.0
+
+[node name="Meditation" type="BoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 814.0
+offset_top = 500.0
+offset_right = 854.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20

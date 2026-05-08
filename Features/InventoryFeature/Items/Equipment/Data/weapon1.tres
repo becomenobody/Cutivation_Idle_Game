@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item_Data" load_steps=3 format=3 uid="uid://dub277rds1cp0"]
+
+[ext_resource type="Texture2D" uid="uid://dga35k3hiabbr" path="res://Features/InventoryFeature/Items/Equipment/Asset/weapon1_texture.tres" id="1_1eeqq"]
+[ext_resource type="Script" uid="uid://ta6lk2b08mmq" path="res://Features/InventoryFeature/Items/item_data.gd" id="2_yomxe"]
+
+[resource]
+script = ExtResource("2_yomxe")
+Name = "Weapon 1"
+Item = 2
+Icon = ExtResource("1_1eeqq")
+Usage = "To Equip"
+metadata/_custom_type_script = "uid://ta6lk2b08mmq"

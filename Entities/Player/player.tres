@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="player_res" load_steps=2 format=3 uid="uid://dstaescdpe3vh"]
+
+[ext_resource type="Script" uid="uid://bnjjebe0aluge" path="res://Entities/Player/New_Player/player_res.gd" id="1_x1mir"]
+
+[resource]
+script = ExtResource("1_x1mir")
+health = 100
+metadata/_custom_type_script = "uid://bnjjebe0aluge"

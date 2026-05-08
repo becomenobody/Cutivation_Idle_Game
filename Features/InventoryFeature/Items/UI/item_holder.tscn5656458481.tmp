@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2lcnvcbvsqep"]
+
+[ext_resource type="Script" uid="uid://by3qy62gqnv4v" path="res://Features/InventoryFeature/Items/UI/item_holder.gd" id="1_6n6t2"]
+[ext_resource type="Texture2D" uid="uid://dga35k3hiabbr" path="res://Features/InventoryFeature/Items/Equipment/Asset/weapon1_texture.tres" id="2_6n6t2"]
+
+[node name="Item_Holder" type="Panel"]
+custom_minimum_size = Vector2(50, 50)
+layout_direction = 1
+offset_right = 50.0
+offset_bottom = 50.0
+mouse_filter = 2
+script = ExtResource("1_6n6t2")
+
+[node name="Icon" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_right = 50.0
+offset_bottom = 50.0
+mouse_filter = 0
+texture = ExtResource("2_6n6t2")

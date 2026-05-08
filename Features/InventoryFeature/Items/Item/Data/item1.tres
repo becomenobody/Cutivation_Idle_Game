@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item_Data" load_steps=3 format=3 uid="uid://bp4mxmmeyu05s"]
+
+[ext_resource type="Texture2D" uid="uid://comougkyxfafe" path="res://Features/InventoryFeature/Items/Item/Asset/item1_texture.tres" id="1_smmfa"]
+[ext_resource type="Script" uid="uid://ta6lk2b08mmq" path="res://Features/InventoryFeature/Items/item_data.gd" id="2_6t0qa"]
+
+[resource]
+script = ExtResource("2_6t0qa")
+Name = "Health Potion"
+Item = 0
+Icon = ExtResource("1_smmfa")
+Usage = "Heal 10 Health"
+metadata/_custom_type_script = "uid://ta6lk2b08mmq"

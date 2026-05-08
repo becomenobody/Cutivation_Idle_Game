@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item_Data" load_steps=3 format=3 uid="uid://blvcspnom8mpo"]
+
+[ext_resource type="Script" uid="uid://ta6lk2b08mmq" path="res://Features/InventoryFeature/Items/item_data.gd" id="1_5jnxg"]
+[ext_resource type="Texture2D" uid="uid://0bta7aktcl31" path="res://Features/InventoryFeature/Items/Item/Asset/item2_texture.tres" id="1_yip1e"]
+
+[resource]
+script = ExtResource("1_5jnxg")
+Name = "Sliver Bar"
+Item = 1
+Icon = ExtResource("1_yip1e")
+Usage = "Forge Weapon"
+metadata/_custom_type_script = "uid://ta6lk2b08mmq"

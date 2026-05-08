@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Player_Res" load_steps=2 format=3 uid="uid://cbuvvw0xsabr5"]
+
+[ext_resource type="Script" uid="uid://bnjjebe0aluge" path="res://Entities/Player/New_Player/player_res.gd" id="1_k4np7"]
+
+[resource]
+script = ExtResource("1_k4np7")
+health = 100
+attack = 10
+level = 0
+metadata/_custom_type_script = "uid://bnjjebe0aluge"

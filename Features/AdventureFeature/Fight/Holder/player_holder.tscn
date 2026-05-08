@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8ckvp01npi6q"]
+
+[ext_resource type="Script" uid="uid://84aam14boc6s" path="res://Features/AdventureFeature/Fight/Holder/player_holder.gd" id="1_r642s"]
+[ext_resource type="Texture2D" uid="uid://cg43pit5mfy2g" path="res://Asset/Sprite-0001.png" id="2_1xh74"]
+
+[node name="PlayerHolder" type="Node2D"]
+script = ExtResource("1_r642s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("2_1xh74")
+
+[node name="Level" type="Label" parent="."]
+offset_left = -26.0
+offset_top = -113.0
+offset_right = 17.0
+offset_bottom = -90.0
+text = "Thing"
+
+[node name="Stat" type="BoxContainer" parent="."]
+offset_left = -71.0
+offset_top = 99.0
+offset_right = 69.0
+offset_bottom = 139.0
+theme_override_constants/separation = 30
+
+[node name="Health" type="Label" parent="Stat"]
+layout_mode = 2
+text = "Health:"
+
+[node name="Attack" type="Label" parent="Stat"]
+layout_mode = 2
+text = "Attack:"

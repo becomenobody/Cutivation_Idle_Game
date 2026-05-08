@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2lcnvcbvsqep"]
+
+[ext_resource type="Script" uid="uid://by3qy62gqnv4v" path="res://Features/InventoryFeature/Items/UI/item_holder.gd" id="1_6n6t2"]
+
+[node name="Item_Holder" type="Panel"]
+z_as_relative = false
+custom_minimum_size = Vector2(50, 50)
+layout_direction = 1
+offset_right = 50.0
+offset_bottom = 50.0
+script = ExtResource("1_6n6t2")
+
+[node name="Icon" type="TextureRect" parent="."]
+z_as_relative = false
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_right = 50.0
+offset_bottom = 50.0
+mouse_force_pass_scroll_events = false
+expand_mode = 1

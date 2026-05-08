@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Magical_Book" load_steps=3 format=3 uid="uid://ct6kj1bqylf13"]
+
+[ext_resource type="Script" uid="uid://bmbmclh0hujt4" path="res://Features/CultivationFeature/MagicCultivation/BookFeature/Data/Magical_Book/magical_book.gd" id="1_8atac"]
+[ext_resource type="Texture2D" uid="uid://j042w63ubtab" path="res://icon.svg" id="1_lndg8"]
+
+[resource]
+script = ExtResource("1_8atac")
+Magical_Qi_Idle = 5
+Magical_Qi_Bonus = 0
+Magical_Qi_Tick = 200
+Experiment_To_Level_Up = Array[int]([200, 1000, 10000])
+Level = 0
+Level_Experiment = 0
+Cultivation = 0
+Element = 4
+Tier = 0
+Description = ""
+Name = "magicbook2"
+Item = 0
+Icon = ExtResource("1_lndg8")
+metadata/_custom_type_script = "uid://bmbmclh0hujt4"
