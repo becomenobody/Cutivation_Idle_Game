@@ -1,6 +1,7 @@
 extends Panel
 
 signal Drag_Item(from_holder, to_holder)
+signal Check_Item(item_data: Item_Data)
 
 @onready var m_function_ui : My_Function_UI = My_Function_UI.new()
 @onready var item_information_popup := preload("res://Features/InventoryFeature/Items/UI/item_information_popup.tscn")
@@ -22,6 +23,7 @@ func Item_Holder_Display(item_data: Item_Data):
 func _get_drag_data(at_position):
 	if icon.texture == null:
 		return
+	Check_Item.emit(item)
 	var preview_texture : TextureRect = TextureRect.new()
 	preview_texture.texture = icon.texture
 	var preview : Control = Control.new()
@@ -41,6 +43,4 @@ func _drop_data(at_position, data):
 	# Update visual
 	icon.texture = item.Icon if item != null else null
 	source_holder.icon.texture = source_holder.item.Icon if source_holder.item != null else null
-	
 	Drag_Item.emit(source_holder,self)
-	

@@ -2,6 +2,7 @@ extends Control
 
 @onready var container : GridContainer = $Container
 @onready var information := $item_information
+@onready var equipment := %Equipment
 
 @onready var item1 : Item_Data = preload("res://Features/InventoryFeature/Items/Item/Data/item1.tres")
 @onready var item2 : Item_Data = preload("res://Features/InventoryFeature/Items/Item/Data/item2.tres")
@@ -35,8 +36,8 @@ func Inventory_List_Display(inventory_item):
 			item_instance.Item_Holder_Display(inventory_item[inventory])
 		
 		item_instance.Drag_Item.connect(Item_Change)
+		item_instance.Check_Item.connect(Check_Item)
 	
-		
 	print(inventory_container_list)
 	
 func Item_Change(from_holder, to_holder):
@@ -45,6 +46,16 @@ func Item_Change(from_holder, to_holder):
 	Inventory_List_Display(inventory_container_list)
 	pass
 
+
+func Check_Item(item_data: Item_Data):
+	if item_data is Equipment_Data:
+		equipment.Check_Part_Equipment(item_data)
+	else: 
+		print("Another")
+
+
 func _on_button_pressed():
-	
+	var index = 3
+	inventory_container_list[index] = weapon1
+	Inventory_List_Display(inventory_container_list)
 	pass # Replace with function body.

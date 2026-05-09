@@ -1,12 +1,9 @@
-[gd_resource type="Resource" script_class="Item_Data" load_steps=3 format=3 uid="uid://dub277rds1cp0"]
+[gd_resource type="Resource" script_class="Equipment_Data" format=3 uid="uid://dvwr65356k0ww"]
 
-[ext_resource type="Texture2D" uid="uid://dga35k3hiabbr" path="res://Features/InventoryFeature/Items/Equipment/Asset/weapon1_texture.tres" id="1_1eeqq"]
-[ext_resource type="Script" uid="uid://ta6lk2b08mmq" path="res://Features/InventoryFeature/Items/item_data.gd" id="2_yomxe"]
+[ext_resource type="Texture2D" uid="uid://bhb2e02ll0t7j" path="res://Features/InventoryFeature/Items/Equipment/Asset/weapon1_texture.tres" id="1_1eeqq"]
+[ext_resource type="Script" uid="uid://d4mjj0gbk7qnl" path="res://Features/InventoryFeature/Items/Equipment/equipment_data.gd" id="1_a80ya"]
 
 [resource]
-script = ExtResource("2_yomxe")
-Name = "Weapon 1"
-Item = 2
+script = ExtResource("1_a80ya")
 Icon = ExtResource("1_1eeqq")
-Usage = "To Equip"
-metadata/_custom_type_script = "uid://ta6lk2b08mmq"
+metadata/_custom_type_script = "uid://d4mjj0gbk7qnl"

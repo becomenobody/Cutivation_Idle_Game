@@ -1,101 +1,41 @@
-[gd_scene load_steps=3 format=3 uid="uid://nqmifn6occro"]
+[gd_scene format=3 uid="uid://nqmifn6occro"]
 
 [ext_resource type="Script" uid="uid://bb6bl5ih6di7n" path="res://Features/InventoryFeature/Items/Equipment/UI/equipment.gd" id="1_bqo48"]
-[ext_resource type="Texture2D" uid="uid://kghx6qismxva" path="res://Asset/Sprite-0004.png" id="2_bqo48"]
+[ext_resource type="PackedScene" uid="uid://d2lcnvcbvsqep" path="res://Features/InventoryFeature/Items/UI/item_holder.tscn" id="2_jbnnk"]
 
-[node name="Equipment" type="Control"]
+[node name="Equipment" type="Control" unique_id=1435443984]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_bqo48")
 
-[node name="BoxContainer" type="BoxContainer" parent="."]
+[node name="BoxContainer" type="BoxContainer" parent="." unique_id=1586610006]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 theme_override_constants/separation = 200
 
-[node name="HBoxContainer" type="VBoxContainer" parent="BoxContainer"]
+[node name="HBoxContainer" type="VBoxContainer" parent="BoxContainer" unique_id=1512926980]
 layout_mode = 2
 theme_override_constants/separation = 50
 
-[node name="Hat" type="Button" parent="BoxContainer/HBoxContainer"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(50, 50)
+[node name="Hat" parent="BoxContainer/HBoxContainer" unique_id=1847666247 instance=ExtResource("2_jbnnk")]
 layout_mode = 2
-expand_icon = true
 
-[node name="TextureRect" type="TextureRect" parent="BoxContainer/HBoxContainer/Hat"]
-custom_minimum_size = Vector2(50, 50)
+[node name="Armor" parent="BoxContainer/HBoxContainer" unique_id=1625329806 instance=ExtResource("2_jbnnk")]
 layout_mode = 2
-offset_right = 50.0
-offset_bottom = 50.0
-texture = ExtResource("2_bqo48")
 
-[node name="Armor" type="Button" parent="BoxContainer/HBoxContainer"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(50, 50)
+[node name="Boot" parent="BoxContainer/HBoxContainer" unique_id=381146751 instance=ExtResource("2_jbnnk")]
 layout_mode = 2
-expand_icon = true
 
-[node name="TextureRect" type="TextureRect" parent="BoxContainer/HBoxContainer/Armor"]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-offset_right = 50.0
-offset_bottom = 50.0
-texture = ExtResource("2_bqo48")
-
-[node name="Boot" type="Button" parent="BoxContainer/HBoxContainer"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-expand_icon = true
-
-[node name="TextureRect" type="TextureRect" parent="BoxContainer/HBoxContainer/Boot"]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-offset_right = 50.0
-offset_bottom = 50.0
-texture = ExtResource("2_bqo48")
-
-[node name="HBoxContainer2" type="VBoxContainer" parent="BoxContainer"]
+[node name="HBoxContainer2" type="VBoxContainer" parent="BoxContainer" unique_id=1219953936]
 layout_mode = 2
 theme_override_constants/separation = 50
 
-[node name="Weapon" type="Button" parent="BoxContainer/HBoxContainer2"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(50, 50)
+[node name="Item_Holder" parent="BoxContainer/HBoxContainer2" unique_id=1569389889 instance=ExtResource("2_jbnnk")]
 layout_mode = 2
-expand_icon = true
 
-[node name="TextureRect" type="TextureRect" parent="BoxContainer/HBoxContainer2/Weapon"]
-custom_minimum_size = Vector2(50, 50)
+[node name="Item_Holder2" parent="BoxContainer/HBoxContainer2" unique_id=752593740 instance=ExtResource("2_jbnnk")]
 layout_mode = 2
-offset_right = 50.0
-offset_bottom = 50.0
-texture = ExtResource("2_bqo48")
 
-[node name="Ring" type="Button" parent="BoxContainer/HBoxContainer2"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(50, 50)
+[node name="Item_Holder3" parent="BoxContainer/HBoxContainer2" unique_id=369829325 instance=ExtResource("2_jbnnk")]
 layout_mode = 2
-expand_icon = true
-
-[node name="TextureRect" type="TextureRect" parent="BoxContainer/HBoxContainer2/Ring"]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-offset_right = 50.0
-offset_bottom = 50.0
-texture = ExtResource("2_bqo48")
-
-[node name="Necklace" type="Button" parent="BoxContainer/HBoxContainer2"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-expand_icon = true
-
-[node name="TextureRect" type="TextureRect" parent="BoxContainer/HBoxContainer2/Necklace"]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-offset_right = 50.0
-offset_bottom = 50.0
-texture = ExtResource("2_bqo48")
