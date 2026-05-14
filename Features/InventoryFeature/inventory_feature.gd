@@ -11,6 +11,8 @@ var inventory_container_list : Dictionary[int,Item_Data]
 
 
 func _ready():
+	for equip_slot in equipment.equipment_connection.size():
+		equipment.equipment_connection[equip_slot].Drag_Item.connect(Item_Change)
 	
 	for i in range(40):
 		inventory_container_list[i] = null
@@ -32,26 +34,36 @@ func Inventory_List_Display(inventory_item):
 		
 		# Check if inventory got item
 		if inventory_item[inventory] != null:
-			print(inventory_item[inventory])
+			#print(inventory_item[inventory])
 			item_instance.Item_Holder_Display(inventory_item[inventory])
 		
 		item_instance.Drag_Item.connect(Item_Change)
-		item_instance.Check_Item.connect(Check_Item)
 	
-	print(inventory_container_list)
 	
 func Item_Change(from_holder, to_holder):
-	inventory_container_list[from_holder.index] = from_holder.item
-	inventory_container_list[to_holder.index] = to_holder.item
-	Inventory_List_Display(inventory_container_list)
-	pass
+	# Check item from inventory or equipment
+	print("Working")
+	# Inventory -> Inventory
+	if from_holder.Slot_Type.INVENTORY == from_holder.slot_type and to_holder.Slot_Type.INVENTORY == to_holder.slot_type:
+		print("inventory -> inventory")
+		var tmp : Item_Data
+		tmp = inventory_container_list[from_holder.index]
+		inventory_container_list[from_holder.index] = inventory_container_list[to_holder.index]
+		inventory_container_list[to_holder.index] = tmp 
+		Inventory_List_Display(inventory_container_list)
+		
+	# Inventory -> Equipment
+	if from_holder.Slot_Type.INVENTORY == from_holder.slot_type and from_holder.item is Equipment_Data \
+	 and to_holder.Slot_Type.EQUIPMENT == to_holder.slot_type:  #Check if it Equipment Data
+		print("inventory -> equipment")
+		var tmp : Equipment_Data
+		tmp = inventory_container_list[from_holder.index]
+		if tmp.Equipment_Type.keys()[tmp.Equipment].to_lower() == to_holder.name.to_lower(): # Check what is that equipment
+			inventory_container_list[from_holder.index] = equipment.equipment_list_equiped[to_holder]
+			equipment.equipment_list_equiped[to_holder] = tmp
+			Inventory_List_Display(inventory_container_list)
+			equipment.Equipment_Equiped_Display(to_holder,equipment.equipment_list_equiped[to_holder])
 
-
-func Check_Item(item_data: Item_Data):
-	if item_data is Equipment_Data:
-		equipment.Check_Part_Equipment(item_data)
-	else: 
-		print("Another")
 
 
 func _on_button_pressed():

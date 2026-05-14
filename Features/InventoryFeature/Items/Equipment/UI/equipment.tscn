@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bb6bl5ih6di7n" path="res://Features/InventoryFeature/Items/Equipment/UI/equipment.gd" id="1_bqo48"]
 [ext_resource type="PackedScene" uid="uid://d2lcnvcbvsqep" path="res://Features/InventoryFeature/Items/UI/item_holder.tscn" id="2_jbnnk"]
+[ext_resource type="Script" uid="uid://d18o0lxf604cb" path="res://Features/InventoryFeature/Items/Equipment/UI/equipment_holder.gd" id="3_3ylki"]
 
 [node name="Equipment" type="Control" unique_id=1435443984]
 layout_mode = 3
@@ -19,23 +20,35 @@ layout_mode = 2
 theme_override_constants/separation = 50
 
 [node name="Hat" parent="BoxContainer/HBoxContainer" unique_id=1847666247 instance=ExtResource("2_jbnnk")]
+unique_name_in_owner = true
 layout_mode = 2
+script = ExtResource("3_3ylki")
 
 [node name="Armor" parent="BoxContainer/HBoxContainer" unique_id=1625329806 instance=ExtResource("2_jbnnk")]
+unique_name_in_owner = true
 layout_mode = 2
+script = ExtResource("3_3ylki")
 
 [node name="Boot" parent="BoxContainer/HBoxContainer" unique_id=381146751 instance=ExtResource("2_jbnnk")]
+unique_name_in_owner = true
 layout_mode = 2
+script = ExtResource("3_3ylki")
 
 [node name="HBoxContainer2" type="VBoxContainer" parent="BoxContainer" unique_id=1219953936]
 layout_mode = 2
 theme_override_constants/separation = 50
 
-[node name="Item_Holder" parent="BoxContainer/HBoxContainer2" unique_id=1569389889 instance=ExtResource("2_jbnnk")]
+[node name="Weapon" parent="BoxContainer/HBoxContainer2" unique_id=1569389889 instance=ExtResource("2_jbnnk")]
+unique_name_in_owner = true
 layout_mode = 2
+script = ExtResource("3_3ylki")
 
-[node name="Item_Holder2" parent="BoxContainer/HBoxContainer2" unique_id=752593740 instance=ExtResource("2_jbnnk")]
+[node name="Ring" parent="BoxContainer/HBoxContainer2" unique_id=752593740 instance=ExtResource("2_jbnnk")]
+unique_name_in_owner = true
 layout_mode = 2
+script = ExtResource("3_3ylki")
 
-[node name="Item_Holder3" parent="BoxContainer/HBoxContainer2" unique_id=369829325 instance=ExtResource("2_jbnnk")]
+[node name="Necklace" parent="BoxContainer/HBoxContainer2" unique_id=369829325 instance=ExtResource("2_jbnnk")]
+unique_name_in_owner = true
 layout_mode = 2
+script = ExtResource("3_3ylki")
