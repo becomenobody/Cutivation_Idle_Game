@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Equipment_Data" format=3 uid="uid://t2jrbpluqcll"]
+
+[ext_resource type="Texture2D" uid="uid://c7jbng3f5y2e3" path="res://Features/InventoryFeature/Items/Equipment/Asset/hat1_texture.tres" id="1_1ve7k"]
+[ext_resource type="Script" uid="uid://d4mjj0gbk7qnl" path="res://Features/InventoryFeature/Items/Equipment/equipment_data.gd" id="1_uxe88"]
+
+[resource]
+script = ExtResource("1_uxe88")
+Name = "hat"
+Icon = ExtResource("1_1ve7k")
+metadata/_custom_type_script = "uid://d4mjj0gbk7qnl"

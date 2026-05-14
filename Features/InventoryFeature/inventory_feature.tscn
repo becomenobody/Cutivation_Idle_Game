@@ -28,14 +28,6 @@ offset_right = 8.0
 offset_bottom = 8.0
 text = "CLICK IT"
 
-[node name="Item_Information" parent="." unique_id=1311052104 instance=ExtResource("2_2dcra")]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 1200.0
-offset_top = 500.0
-offset_right = 1200.0
-offset_bottom = 500.0
-
 [node name="Equipment" parent="." unique_id=1952892248 instance=ExtResource("3_yqirr")]
 unique_name_in_owner = true
 layout_mode = 0
@@ -43,5 +35,12 @@ offset_left = 176.0
 offset_top = 90.0
 offset_right = 176.0
 offset_bottom = 90.0
+
+[node name="item_information" parent="." unique_id=1903114060 instance=ExtResource("2_2dcra")]
+layout_mode = 0
+offset_left = 1282.0
+offset_top = 505.0
+offset_right = 1282.0
+offset_bottom = 505.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

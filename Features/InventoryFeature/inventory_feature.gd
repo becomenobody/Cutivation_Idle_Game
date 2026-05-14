@@ -7,6 +7,7 @@ extends Control
 @onready var item1 : Item_Data = preload("res://Features/InventoryFeature/Items/Item/Data/item1.tres")
 @onready var item2 : Item_Data = preload("res://Features/InventoryFeature/Items/Item/Data/item2.tres")
 @onready var weapon1 : Item_Data = preload("res://Features/InventoryFeature/Items/Equipment/Data/weapon1.tres")
+@onready var hat1 : Item_Data = preload("res://Features/InventoryFeature/Items/Equipment/Data/hat1.tres")
 var inventory_container_list : Dictionary[int,Item_Data]
 
 
@@ -36,7 +37,7 @@ func Inventory_List_Display(inventory_item):
 		if inventory_item[inventory] != null:
 			#print(inventory_item[inventory])
 			item_instance.Item_Holder_Display(inventory_item[inventory])
-		
+			item_instance.Click_Item_Display(inventory_item[inventory])
 		item_instance.Drag_Item.connect(Item_Change)
 	
 	
@@ -63,11 +64,15 @@ func Item_Change(from_holder, to_holder):
 			equipment.equipment_list_equiped[to_holder] = tmp
 			Inventory_List_Display(inventory_container_list)
 			equipment.Equipment_Equiped_Display(to_holder,equipment.equipment_list_equiped[to_holder])
-
+			
+	
+	
 
 
 func _on_button_pressed():
 	var index = 3
+	var index_2 = 2
 	inventory_container_list[index] = weapon1
+	inventory_container_list[index_2] = hat1
 	Inventory_List_Display(inventory_container_list)
 	pass # Replace with function body.

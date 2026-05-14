@@ -11,16 +11,13 @@ enum Slot_Type {
 
 @onready var m_function_ui : My_Function_UI = My_Function_UI.new()
 @onready var item_information_popup := preload("res://Features/InventoryFeature/Items/UI/item_information_popup.tscn")
-
 @onready var icon : TextureRect = $Icon
-
 var item : Item_Data
 
 func Item_Holder_Display(item_data: Item_Data):
 	icon.texture = item_data.Icon
 	var item_information_popup_instance = item_information_popup.instantiate()
 	m_function_ui.Hover(icon,item_information_popup_instance,item_data)
-	#m_function_ui.Left_Click(icon,item_information,item_data)
 	item = item_data
 
 

@@ -25,4 +25,4 @@ func _ready():
 
 func Equipment_Equiped_Display(equipment_slot: Slot_Holder,equipment_data : Equipment_Data):
 	equipment_slot.Item_Holder_Display(equipment_data)
-		
+	equipment_slot.Click_Item_Display(equipment_data)

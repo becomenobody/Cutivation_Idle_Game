@@ -1,51 +1,51 @@
-[gd_scene load_steps=3 format=3 uid="uid://6floyngem5lf"]
+[gd_scene format=3 uid="uid://6floyngem5lf"]
 
 [ext_resource type="Script" uid="uid://chj2l4ey5xf6w" path="res://Features/InventoryFeature/Items/UI/item_information.gd" id="1_axpxd"]
 [ext_resource type="Texture2D" uid="uid://j042w63ubtab" path="res://icon.svg" id="2_5vqxp"]
 
-[node name="item_information" type="Control" groups=["Get_Information"]]
+[node name="item_information" type="Control" unique_id=1903114060 groups=["Get_Information"]]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_axpxd")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1034972786]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 0
 offset_right = 500.0
 offset_bottom = 40.0
 
-[node name="BoxContainer" type="BoxContainer" parent="ScrollContainer"]
+[node name="BoxContainer" type="BoxContainer" parent="ScrollContainer" unique_id=1154325763]
 layout_mode = 2
 
-[node name="Icon_Holder" type="VBoxContainer" parent="ScrollContainer/BoxContainer"]
+[node name="Icon_Holder" type="VBoxContainer" parent="ScrollContainer/BoxContainer" unique_id=1700587546]
 layout_mode = 2
 
-[node name="Icon" type="TextureRect" parent="ScrollContainer/BoxContainer/Icon_Holder"]
+[node name="Icon" type="TextureRect" parent="ScrollContainer/BoxContainer/Icon_Holder" unique_id=1410339594]
 clip_contents = true
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 texture = ExtResource("2_5vqxp")
 expand_mode = 1
 
-[node name="Information" type="VBoxContainer" parent="ScrollContainer/BoxContainer"]
+[node name="Information" type="VBoxContainer" parent="ScrollContainer/BoxContainer" unique_id=1142886287]
 layout_mode = 2
 
-[node name="Name" type="Label" parent="ScrollContainer/BoxContainer/Information"]
+[node name="Name" type="Label" parent="ScrollContainer/BoxContainer/Information" unique_id=1543513796]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Name : "
 
-[node name="Type" type="Label" parent="ScrollContainer/BoxContainer/Information"]
+[node name="Type" type="Label" parent="ScrollContainer/BoxContainer/Information" unique_id=103740172]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Type : "
 
-[node name="Usage" type="Label" parent="ScrollContainer/BoxContainer/Information"]
+[node name="Usage" type="Label" parent="ScrollContainer/BoxContainer/Information" unique_id=925701547]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Usage :"
 
-[node name="item_btn" type="Button" parent="."]
+[node name="item_btn" type="Button" parent="." unique_id=1126163270]
 layout_mode = 0
 offset_top = 500.0
 offset_right = 8.0
