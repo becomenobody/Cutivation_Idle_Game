@@ -15,11 +15,22 @@ enum Slot_Type {
 var item : Item_Data
 
 func Item_Holder_Display(item_data: Item_Data):
-	icon.texture = item_data.Icon
-	var item_information_popup_instance = item_information_popup.instantiate()
-	m_function_ui.Hover(icon,item_information_popup_instance,item_data)
+	m_function_ui.All_Disconnection(icon)
 	item = item_data
+	
+	
+	if item_data == null:
+		icon.texture = null
+		item = null
+		return
 
+	var item_information_popup_instance = item_information_popup.instantiate()
+
+	m_function_ui.Hover(icon, item_information_popup_instance, item)
+
+	icon.texture = item_data.Icon
+	
+	
 
 func _get_drag_data(at_position):
 	if icon.texture == null:
@@ -32,7 +43,7 @@ func _get_drag_data(at_position):
 	return self
 
 func _can_drop_data(at_position, data):
-	return Slot_Holder
+	return data is Slot_Holder
 
 func _drop_data(at_position, data):
 	var source_holder = data

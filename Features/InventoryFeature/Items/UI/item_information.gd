@@ -10,6 +10,8 @@ extends Control
 
 
 func Information_Display(item_data : Item_Data):
+	if item_data == null:
+		return
 	icon.texture = item_data.Icon
 	i_name.text = item_data.Name
 	usage.text = item_data.Usage

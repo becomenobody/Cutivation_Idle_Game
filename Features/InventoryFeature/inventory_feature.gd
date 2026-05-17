@@ -8,13 +8,13 @@ extends Control
 @onready var item2 : Item_Data = preload("res://Features/InventoryFeature/Items/Item/Data/item2.tres")
 @onready var weapon1 : Item_Data = preload("res://Features/InventoryFeature/Items/Equipment/Data/weapon1.tres")
 @onready var hat1 : Item_Data = preload("res://Features/InventoryFeature/Items/Equipment/Data/hat1.tres")
+@onready var hat2 : Item_Data = preload("res://Features/InventoryFeature/Items/Equipment/Data/hat2.tres")
 var inventory_container_list : Dictionary[int,Item_Data]
 
 
 func _ready():
-	for equip_slot in equipment.equipment_connection.size():
-		equipment.equipment_connection[equip_slot].Drag_Item.connect(Item_Change)
-	
+	Equipment_Connection()
+
 	for i in range(40):
 		inventory_container_list[i] = null
 	
@@ -23,7 +23,16 @@ func _ready():
 	
 	Inventory_List_Display(inventory_container_list)
 	pass
+
+func Equipment_Connection():
+	var equipment_list_1: Array = equipment.equipment_connection_1.keys()
+	var equipment_list_2: Array = equipment.equipment_connection_2.keys()
+
+	for equip in equipment_list_2.size():
+		equipment_list_1[equip].Drag_Item.connect(Item_Change)
+		equipment_list_2[equip].Drag_Item.connect(Item_Change)
 	
+
 func Inventory_List_Display(inventory_item):
 	for inventory_node in container.get_children():
 		inventory_node.queue_free()
@@ -39,8 +48,9 @@ func Inventory_List_Display(inventory_item):
 			item_instance.Item_Holder_Display(inventory_item[inventory])
 			item_instance.Click_Item_Display(inventory_item[inventory])
 		item_instance.Drag_Item.connect(Item_Change)
+
 	
-	
+
 func Item_Change(from_holder, to_holder):
 	# Check item from inventory or equipment
 	print("Working")
@@ -65,8 +75,16 @@ func Item_Change(from_holder, to_holder):
 			Inventory_List_Display(inventory_container_list)
 			equipment.Equipment_Equiped_Display(to_holder,equipment.equipment_list_equiped[to_holder])
 			
-	
-	
+	# Equipment -> Inventory
+	if from_holder.Slot_Type.EQUIPMENT == from_holder.slot_type and to_holder.Slot_Type.INVENTORY == to_holder.slot_type:
+		print("equipment -> inventory")
+		var tmp : Item_Data
+		tmp = equipment.equipment_list_equiped[from_holder]
+		if inventory_container_list[to_holder.index] is Equipment_Data or inventory_container_list[to_holder.index] == null:
+			equipment.equipment_list_equiped[from_holder] = inventory_container_list[to_holder.index]
+			inventory_container_list[to_holder.index] = tmp
+			Inventory_List_Display(inventory_container_list)
+			equipment.Equipment_Equiped_Display(from_holder,equipment.equipment_list_equiped[from_holder])
 
 
 func _on_button_pressed():
@@ -74,5 +92,6 @@ func _on_button_pressed():
 	var index_2 = 2
 	inventory_container_list[index] = weapon1
 	inventory_container_list[index_2] = hat1
+	inventory_container_list[5] = hat2
 	Inventory_List_Display(inventory_container_list)
 	pass # Replace with function body.

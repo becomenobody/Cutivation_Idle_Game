@@ -3,7 +3,6 @@ extends Slot_Holder
 
 var index : int
 var slot_type := 1 # Equipment
-var _can_drop : bool = false
 
 func Click_Item_Display(item_data: Item_Data):
 	var item_information = get_parent().get_parent().get_parent().get_parent().information
