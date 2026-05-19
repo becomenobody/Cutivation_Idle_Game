@@ -28,9 +28,10 @@ func testing_menu_game(player_res : Player_Res):
 	player_new_game = player_res
 	print("Start game : %s,%s" %[player_new_game.health,player_new_game.attack])
 
+# Start New Game button
 func Start_New_Game():
-	player.player_attack.value = player_new_game.attack
-	player.player_health.value = player_new_game.health
+	player.player_attack.Base_Attack(player_new_game.attack) 
+	player.player_health.Base_Max_Health(player_new_game.health)
 	player.player_level.value = player_new_game.level
 	player.player_magic_qi_idle.value = player_new_game.magic_qi_idle
 	player.player_magic_qi_tick.value = player_new_game.magic_qi_tick
@@ -69,6 +70,7 @@ func Signal_Connection():
 	ui.cultivation_maigc.break_through_btn.pressed.connect(Cultivation_Feature_Button_UI) # Button connect to breakthrough feature
 	ui.cultivation_maigc.Meditation_Level_Up_Stat.connect(Meditation_Level_Up)
 	ui.cultivation_maigc.Equiped_Book_Signal.connect(player.Equiped_Book)
+	ui.inventory_feature.equipment.Equiped_Stat_Signal.connect(Inventory_Feature_Player)
 
 #region Cultivation Features
 # Cultivation Features Function
@@ -94,3 +96,8 @@ func Breakthrough_Magical_Update(realm, qi): #Update Player when breakthrough or
 
 func Meditation_Level_Up(value: int):
 	player.player_magic_qi_tick.Base_Qi_Tick_Increase(value)
+
+func Inventory_Feature_Player(attack: int, health: int):
+	player.player_attack.Equipment_Equiped_Attack(attack)
+	player.player_health.Equipment_Equiped_Health(health)
+	

@@ -5,6 +5,8 @@
 
 [resource]
 script = ExtResource("2_s8knb")
+Attack = 2
+Health = 20
 Name = "hat2"
 Icon = ExtResource("1_u56k7")
 metadata/_custom_type_script = "uid://d4mjj0gbk7qnl"

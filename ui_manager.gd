@@ -15,11 +15,11 @@ var m_function_ui : My_Function_UI = My_Function_UI.new()
 func _ready():
 	Clear_Notification()
 	Menu_Feature_Change()
+	
+
 
 func _process(delta):
 	pass
-	
-
 
 # Main Menu Container
 @onready var avatar = $Menu_Container/Stat/Avatar

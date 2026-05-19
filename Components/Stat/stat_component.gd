@@ -13,7 +13,8 @@ var value : int :
 func Cultivation_Book_Attach(book_data: Book_Data):
 	cultivation_book = book_data
 	_recalculate()
-	
+
+
 func _calculate_value()->int:
 	return 0
 	

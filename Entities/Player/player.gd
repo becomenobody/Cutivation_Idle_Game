@@ -62,6 +62,7 @@ func Equiped_Book_Stat(equip_book):
 		pass
 	
 
+# Loaded  Button
 func Player_Stat_Loaded(): # Player Loaded 
 	player_level.value = Player_Realm_Level
 	player_magic_qi_experiment.value = Player_Magic_Qi_Experiment
@@ -70,7 +71,7 @@ func Player_Stat_Loaded(): # Player Loaded
 	# Health Component
 	player_health.value = Player_Max_Health
 	# Attack  Component
-	player_attack.value = Player_Attack
+	player_attack.base_attack = Player_Attack
 
 
 

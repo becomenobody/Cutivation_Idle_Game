@@ -12,3 +12,5 @@ enum Equipment_Type{
 
 @export var Equipment : Equipment_Type
 @export var Type : Item_Type = Item_Type.EQUIPMENT
+@export var Attack : int
+@export var Health : int

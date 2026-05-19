@@ -47,9 +47,10 @@ func Inventory_List_Display(inventory_item):
 			#print(inventory_item[inventory])
 			item_instance.Item_Holder_Display(inventory_item[inventory])
 			item_instance.Click_Item_Display(inventory_item[inventory])
+			
 		item_instance.Drag_Item.connect(Item_Change)
 
-	
+# Change Item When Draging
 
 func Item_Change(from_holder, to_holder):
 	# Check item from inventory or equipment

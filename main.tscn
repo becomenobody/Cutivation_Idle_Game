@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://1d4wdve3o1kg"]
+[gd_scene format=3 uid="uid://1d4wdve3o1kg"]
 
 [ext_resource type="Script" uid="uid://b84ow3mo5ma16" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dbytgwidgugyp" path="res://Entities/Player/player.tscn" id="1_ig7tw"]
@@ -10,17 +10,17 @@
 [ext_resource type="PackedScene" uid="uid://82ohpoubhx8y" path="res://Features/AdventureFeature/adventure_feature.tscn" id="8_4c57u"]
 [ext_resource type="PackedScene" uid="uid://cus7f0a6ex7qu" path="res://System/Game_Menu/choose_character.tscn" id="9_kek77"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" unique_id=1604049173]
 script = ExtResource("1_h2yge")
 
-[node name="Player" parent="." groups=["game_events"] instance=ExtResource("1_ig7tw")]
+[node name="Player" parent="." unique_id=1444203706 groups=["game_events"] instance=ExtResource("1_ig7tw")]
 unique_name_in_owner = true
 
-[node name="UI" type="Node" parent="." groups=["game_events"]]
+[node name="UI" type="Node" parent="." unique_id=1748034906 groups=["game_events"]]
 unique_name_in_owner = true
 script = ExtResource("2_0xm2m")
 
-[node name="Menu_Container" type="Control" parent="UI"]
+[node name="Menu_Container" type="Control" parent="UI" unique_id=1361470773]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -29,15 +29,15 @@ offset_right = -1620.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Stat" type="Control" parent="UI/Menu_Container"]
+[node name="Stat" type="Control" parent="UI/Menu_Container" unique_id=733323351]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 200.0
 grow_horizontal = 2
 
-[node name="Avatar" type="TextureRect" parent="UI/Menu_Container/Stat"]
-layout_mode = 2
+[node name="Avatar" type="TextureRect" parent="UI/Menu_Container/Stat" unique_id=977463396]
+layout_mode = 0
 offset_left = 1.0
 offset_top = 37.0
 offset_right = 129.0
@@ -45,23 +45,23 @@ offset_bottom = 237.0
 texture = ExtResource("4_1bvp3")
 stretch_mode = 2
 
-[node name="Health" type="Label" parent="UI/Menu_Container/Stat"]
-layout_mode = 2
+[node name="Health" type="Label" parent="UI/Menu_Container/Stat" unique_id=1481807259]
+layout_mode = 0
 offset_left = 150.0
 offset_top = 5.0
 offset_right = 202.0
 offset_bottom = 28.0
 text = "Health"
 
-[node name="Attack" type="Label" parent="UI/Menu_Container/Stat"]
-layout_mode = 2
+[node name="Attack" type="Label" parent="UI/Menu_Container/Stat" unique_id=1385335623]
+layout_mode = 0
 offset_left = 150.0
 offset_top = 50.0
 offset_right = 200.0
 offset_bottom = 99.0
 text = "Attack"
 
-[node name="Experiment" type="Label" parent="UI/Menu_Container/Stat"]
+[node name="Experiment" type="Label" parent="UI/Menu_Container/Stat" unique_id=1968198640]
 layout_mode = 0
 offset_left = 7.0
 offset_top = 169.0
@@ -69,7 +69,7 @@ offset_right = 97.0
 offset_bottom = 192.0
 text = "Experiment"
 
-[node name="Realm" type="Label" parent="UI/Menu_Container/Stat"]
+[node name="Realm" type="Label" parent="UI/Menu_Container/Stat" unique_id=145788125]
 layout_mode = 0
 offset_left = 5.0
 offset_top = 11.0
@@ -77,7 +77,7 @@ offset_right = 54.0
 offset_bottom = 34.0
 text = "Realm"
 
-[node name="Menu_Bar" type="VBoxContainer" parent="UI/Menu_Container"]
+[node name="Menu_Bar" type="VBoxContainer" parent="UI/Menu_Container" unique_id=59229031]
 custom_minimum_size = Vector2(200, 860)
 layout_mode = 0
 offset_left = 2.0
@@ -85,19 +85,19 @@ offset_top = 212.0
 offset_right = 42.0
 offset_bottom = 252.0
 
-[node name="Cultivation" type="Button" parent="UI/Menu_Container/Menu_Bar"]
+[node name="Cultivation" type="Button" parent="UI/Menu_Container/Menu_Bar" unique_id=1825475322]
 layout_mode = 2
 text = "Cultivation"
 
-[node name="Adventure" type="Button" parent="UI/Menu_Container/Menu_Bar"]
+[node name="Adventure" type="Button" parent="UI/Menu_Container/Menu_Bar" unique_id=1403481113]
 layout_mode = 2
 text = "Adventure"
 
-[node name="Inventory" type="Button" parent="UI/Menu_Container/Menu_Bar"]
+[node name="Inventory" type="Button" parent="UI/Menu_Container/Menu_Bar" unique_id=1240196285]
 layout_mode = 2
 text = "Inventory"
 
-[node name="Cultivation_Feature" type="Control" parent="UI"]
+[node name="Cultivation_Feature" type="Control" parent="UI" unique_id=1404603620]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -108,18 +108,19 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Cultivation_Magic" parent="UI/Cultivation_Feature" instance=ExtResource("5_5vw27")]
+[node name="Cultivation_Magic" parent="UI/Cultivation_Feature" unique_id=1332150141 instance=ExtResource("5_5vw27")]
+layout_mode = 0
 
-[node name="Adventure_Feature" parent="UI" instance=ExtResource("8_4c57u")]
+[node name="Adventure_Feature" parent="UI" unique_id=1166199222 instance=ExtResource("8_4c57u")]
 visible = false
 offset_left = 300.0
 
-[node name="Inventory_Feature" parent="UI" instance=ExtResource("7_kek77")]
+[node name="Inventory_Feature" parent="UI" unique_id=490184520 instance=ExtResource("7_kek77")]
 visible = false
 offset_left = 300.0
 offset_right = 300.0
 
-[node name="Notification" type="VBoxContainer" parent="UI"]
+[node name="Notification" type="VBoxContainer" parent="UI" unique_id=1879018245]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -127,11 +128,11 @@ offset_left = -200.0
 offset_bottom = 1080.0
 grow_horizontal = 0
 
-[node name="Clear" type="Button" parent="UI/Notification"]
+[node name="Clear" type="Button" parent="UI/Notification" unique_id=927215472]
 layout_mode = 2
 text = "Clear"
 
-[node name="Start" type="Button" parent="UI"]
+[node name="Start" type="Button" parent="UI" unique_id=1625863959]
 visible = false
 offset_left = 1855.0
 offset_top = 802.0
@@ -139,31 +140,31 @@ offset_right = 1901.0
 offset_bottom = 833.0
 text = "Start"
 
-[node name="Save" type="Button" parent="UI"]
+[node name="Save" type="Button" parent="UI" unique_id=1961265086]
 offset_left = 1850.0
 offset_top = 841.0
 offset_right = 1907.0
 offset_bottom = 872.0
 text = "Save"
 
-[node name="Load" type="Button" parent="UI"]
+[node name="Load" type="Button" parent="UI" unique_id=360159075]
 offset_left = 1850.0
 offset_top = 883.0
 offset_right = 1907.0
 offset_bottom = 914.0
 text = "Load"
 
-[node name="test_book" type="Button" parent="UI"]
+[node name="test_book" type="Button" parent="UI" unique_id=1827646334]
 offset_right = 8.0
 offset_bottom = 8.0
 text = "click it"
 
-[node name="System" type="Node" parent="."]
+[node name="System" type="Node" parent="." unique_id=214631000]
 
-[node name="SaverLoader" type="Node" parent="System"]
+[node name="SaverLoader" type="Node" parent="System" unique_id=1205792807]
 script = ExtResource("5_lquwl")
 
-[node name="Choose_Character" parent="System" instance=ExtResource("9_kek77")]
+[node name="Choose_Character" parent="System" unique_id=1857482282 instance=ExtResource("9_kek77")]
 visible = false
 
 [connection signal="pressed" from="UI/test_book" to="Player" method="_on_test_pressed"]
