@@ -1,14 +1,17 @@
 [gd_scene format=3 uid="uid://ndwoj8ky32qm"]
 
-[node name="Map" type="Control"]
+[ext_resource type="Script" uid="uid://disyuerqj2bkf" path="res://Features/AdventureFeature/Map/map.gd" id="1_spfsq"]
+
+[node name="Map" type="Control" unique_id=696032094]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_spfsq")
 
-[node name="Button" type="Button" parent="."]
+[node name="Map_1" type="Button" parent="." unique_id=735216574]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

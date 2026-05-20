@@ -45,6 +45,7 @@ func Max_Qi_Experiment(value : int) :
 	qi_max_value = value
 
 func Menu_Health_Display(value : int): # Player Health Display
+	print("Menu Health Display: %s" %value)
 	health.text = "Health : " + str(value) 
 
 func Menu_Attack_Display(value: int):

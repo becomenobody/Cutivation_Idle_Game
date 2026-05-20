@@ -90,8 +90,9 @@ func Qi_Increase_Time(delta): # Increase time per (100 *delta = 1 seconds)
 		
  
 func BreakThrough_Stat_Up(value):
-	player_health.Base_Max_Health_Increase(value)
-	player_attack.Base_Attack_Increase(10)
+	print("BreakThrough health value : %s" %value)
+	player_health.Base_Max_Health(value)
+	player_attack.Base_Attack(10)
 	Player_Max_Health = player_health.value #📄 Save Player_Max_Health
 	Player_Attack = player_attack.value #📄 Save Player_Attack
 

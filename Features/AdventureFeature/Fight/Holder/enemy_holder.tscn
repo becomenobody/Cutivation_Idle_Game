@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bqv1ayttsphve"]
-
-[ext_resource type="Texture2D" uid="uid://j042w63ubtab" path="res://icon.svg" id="1_nucma"]
-
-[node name="EnemyHolder" type="Node2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_nucma")

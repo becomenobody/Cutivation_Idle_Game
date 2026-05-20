@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://82ohpoubhx8y"]
+[gd_scene format=3 uid="uid://82ohpoubhx8y"]
 
 [ext_resource type="PackedScene" uid="uid://ndwoj8ky32qm" path="res://Features/AdventureFeature/Map/map.tscn" id="1_p7xnn"]
 [ext_resource type="Script" uid="uid://cuyygegbalm2w" path="res://Features/AdventureFeature/adventure_feature.gd" id="1_yalv8"]
 
-[node name="Adventure_Feature" type="Control"]
+[node name="Adventure_Feature" type="Control" unique_id=295992425]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,11 +12,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yalv8")
 
-[node name="Map" parent="." instance=ExtResource("1_p7xnn")]
+[node name="Map" parent="." unique_id=1994678847 instance=ExtResource("1_p7xnn")]
 layout_mode = 1
 
-[node name="BackMap" type="Button" parent="."]
-visible = false
+[node name="BackMap" type="Button" parent="." unique_id=844268236]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0

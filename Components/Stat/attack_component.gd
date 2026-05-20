@@ -5,7 +5,7 @@ var base_attack : int
 var equiped_attack : int
 
 func Base_Attack(amount : int):
-	base_attack = amount
+	base_attack += amount
 	_recalculate()
 	
 func Equipment_Equiped_Attack(amount: int):

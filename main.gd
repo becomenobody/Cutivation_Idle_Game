@@ -97,6 +97,7 @@ func Breakthrough_Magical_Update(realm, qi): #Update Player when breakthrough or
 func Meditation_Level_Up(value: int):
 	player.player_magic_qi_tick.Base_Qi_Tick_Increase(value)
 
+# Inventory Equiped Effect
 func Inventory_Feature_Player(attack: int, health: int):
 	player.player_attack.Equipment_Equiped_Attack(attack)
 	player.player_health.Equipment_Equiped_Health(health)
