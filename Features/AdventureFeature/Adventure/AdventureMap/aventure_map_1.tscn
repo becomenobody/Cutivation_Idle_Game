@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://b1wfihpojqp4f"]
+
+[ext_resource type="Script" uid="uid://crcpt7gpdxolg" path="res://Features/AdventureFeature/Adventure/AdventureMap/aventure_map.gd" id="1_afowf"]
+[ext_resource type="PackedScene" uid="uid://dx0d833m2xrv3" path="res://Features/AdventureFeature/Adventure/player_adventure.tscn" id="1_vhnwa"]
+[ext_resource type="Texture2D" uid="uid://kghx6qismxva" path="res://Asset/Sprite-0004.png" id="2_ump61"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ump61"]
+
+[node name="Aventure_Map_1" type="Node2D" unique_id=746784596]
+z_index = -5
+script = ExtResource("1_afowf")
+
+[node name="Player_Adventure" parent="." unique_id=1191075628 instance=ExtResource("1_vhnwa")]
+position = Vector2(379, 311)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1732263892]
+position = Vector2(234.99998, 536)
+scale = Vector2(3.8186216, 1.5746646)
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=182713425]
+position = Vector2(63.8974, -1.2701117)
+scale = Vector2(8.046103, 1.0424571)
+texture = ExtResource("2_ump61")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=390155630]
+position = Vector2(58.39804, 1.905168)
+scale = Vector2(38.005474, 1.1285098)
+shape = SubResource("RectangleShape2D_ump61")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1717239122]
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=1136654408]
+offset_right = 107.0
+offset_bottom = 31.0
+text = "Back To Map"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
